@@ -26,7 +26,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['*-worker.js'],
+      files: ['sw.js'],
       rules: {
         'no-restricted-globals': noRestrictedGlobalsWorker,
       },
