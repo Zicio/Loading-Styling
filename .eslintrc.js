@@ -23,6 +23,7 @@ module.exports = {
     'no-plusplus': 'warn',
     'no-param-reassign': 'warn',
     'no-restricted-globals': noRestrictedGlobals,
+    'consistent-return': 'warn',
   },
   overrides: [
     {

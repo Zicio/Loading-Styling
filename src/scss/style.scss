@@ -11,16 +11,19 @@ html {
    font-family: sans-serif;
 }
 
+$color-text: gray;
+
 .news {
-   background-color: white;
    border: 1px solid black;
    border-radius: 10px;
+   background-color: white;
    padding: 20px 10px;
    margin: 30px auto;
    min-width: 400px;
    max-width: 600px;
    display: grid;
    grid-template-columns: 3fr 1fr;
+   position: relative;
 
 
    .news__title {
@@ -41,7 +44,33 @@ html {
    }
 
    .news__tape {
+      margin-top: 15px;
       grid-column-start: 1;
       grid-column-end: 3;
+      
+      .tape__ticket {
+         margin-top: 20px;
+         width: 100%;
+
+         .ticket__date {
+            max-width: 40%;
+            display: block;
+         }
+
+         .ticket__text {
+            margin-top: 15px;
+            width: 100%;
+            display: block;
+         }
+      }
+   }
+
+   .popup {
+      
+   }
+
+   .download {
+      background-color: $color-text;
+      color: $color-text;
    }
 }
