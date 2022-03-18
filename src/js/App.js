@@ -6,7 +6,7 @@ export default class App {
     this.url = new URL('http://localhost:7000/'); // 'https://zicio-polling.herokuapp.com/'
 
     App.start();
-    this.listenerOfUpdate();
+    this.getRequest();
   }
 
   static start() {
@@ -22,19 +22,15 @@ export default class App {
     }
   }
 
-  listenerOfUpdate() {
-    document.addEventListener('click', (e) => this.getRequest(e));
-  }
-
-  async getRequest(e) {
-    if (e.target.classList.contains('.news__update')) {
-      const response = await fetch(`${this.url}news`);
-      if (response.ok) {
-        // OK return data
-        return response.json();
-      }
-      Dom.showPopup();
+  async getRequest() {
+    const response = await fetch(`${this.url}news`);
+    if (response.ok) {
+      // OK return data
+      const news = await response.json();
+      Dom.showNews(news);
+      return;
     }
+    Dom.showPopup();
   }
 }
 
