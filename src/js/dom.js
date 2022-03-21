@@ -6,7 +6,7 @@ export default class Dom {
     news.append(popup);
 
     const popupText = Dom.setEl('span', 'popup__text');
-    popupText.textConent = 'Не удалось загрузить данные<br>Проверьте подключение<br>и обновите страницу';
+    popupText.textContent = 'Не удалось загрузить данные. Проверьте подключение и обновите страницу';
     popup.append(popupText);
   }
 

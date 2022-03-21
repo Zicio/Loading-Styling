@@ -12,10 +12,13 @@ html {
 }
 
 $color-text: gray;
-
-.news {
+%border-type {
    border: 1px solid black;
    border-radius: 10px;
+}
+
+.news {
+   @extend %border-type;
    background-color: white;
    padding: 20px 10px;
    margin: 30px auto;
@@ -66,7 +69,19 @@ $color-text: gray;
    }
 
    .popup {
-      
+      @extend %border-type;
+      border-color: transparent;
+      position: absolute;
+      height: 100%;
+      background-color: #ffffffc9;
+      box-sizing: border-box;
+      padding: 100px 200px;
+      display: flex;
+
+      .popup__text {
+         margin: auto;
+      }
+
    }
 
    .download {

@@ -23,14 +23,18 @@ export default class App {
   }
 
   async getRequest() {
-    const response = await fetch(`${this.url}news`);
-    if (response.ok) {
-      // OK return data
-      const news = await response.json();
-      Dom.showNews(news);
-      return;
+    try {
+      const response = await fetch(`${this.url}news`);
+      if (response.ok) {
+        // OK return data
+        const news = await response.json();
+        Dom.showNews(news);
+        return;
+      }
+    } catch (err) {
+      console.log(err);
+      Dom.showPopup();
     }
-    Dom.showPopup();
   }
 }
 
