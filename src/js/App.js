@@ -3,7 +3,7 @@ import Dom from './dom';
 export default class App {
   constructor(element) {
     this.element = element;
-    this.url = new URL('https://zicio-sw.herokuapp.com/'); // 'http://localhost:7000/'
+    this.url = new URL('http://localhost:7000/'); // 'https://zicio-sw.herokuapp.com/'
 
     App.start();
     this.getRequest();
