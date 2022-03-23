@@ -13,7 +13,7 @@ export default class App {
     if (navigator.serviceWorker) {
       window.addEventListener('load', async () => {
         try {
-          const reg = await navigator.serviceWorker.register('/service-worker.js', { scope: './' });
+          const reg = await navigator.serviceWorker.register('/service-worker.js', { scope: './Loading-Styling/' });
           console.log('sw registered', reg);
         } catch (e) {
           console.log('sw register fail', e);
